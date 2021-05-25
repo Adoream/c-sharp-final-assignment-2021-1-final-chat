@@ -36,9 +36,6 @@ namespace C_Sharp_Final_Chat
             this.打开主面板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.buttonMax = new System.Windows.Forms.Button();
-            this.buttonMin = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.panelSide = new System.Windows.Forms.Panel();
             this.panelHelp = new System.Windows.Forms.Panel();
@@ -48,20 +45,23 @@ namespace C_Sharp_Final_Chat
             this.panelChat = new System.Windows.Forms.Panel();
             this.buttonChangeUserName = new System.Windows.Forms.Button();
             this.buttonChatroom = new System.Windows.Forms.Button();
-            this.buttonChat = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonMax = new System.Windows.Forms.Button();
+            this.buttonMin = new System.Windows.Forms.Button();
+            this.buttonChat = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelSide.SuspendLayout();
             this.panelHelp.SuspendLayout();
             this.panelChat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelMain.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -97,7 +97,7 @@ namespace C_Sharp_Final_Chat
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(187)))), ((int)(((byte)(255)))));
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             this.panelTop.Controls.Add(this.buttonClose);
             this.panelTop.Controls.Add(this.buttonMax);
             this.panelTop.Controls.Add(this.buttonMin);
@@ -111,48 +111,6 @@ namespace C_Sharp_Final_Chat
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseMove);
             this.panelTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseUp);
             // 
-            // buttonClose
-            // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.FlatAppearance.BorderSize = 0;
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
-            this.buttonClose.Location = new System.Drawing.Point(997, 0);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(21, 24);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // buttonMax
-            // 
-            this.buttonMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMax.FlatAppearance.BorderSize = 0;
-            this.buttonMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMax.Image = ((System.Drawing.Image)(resources.GetObject("buttonMax.Image")));
-            this.buttonMax.Location = new System.Drawing.Point(963, 0);
-            this.buttonMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonMax.Name = "buttonMax";
-            this.buttonMax.Size = new System.Drawing.Size(26, 24);
-            this.buttonMax.TabIndex = 3;
-            this.buttonMax.UseVisualStyleBackColor = true;
-            this.buttonMax.Click += new System.EventHandler(this.buttonMax_Click);
-            // 
-            // buttonMin
-            // 
-            this.buttonMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMin.FlatAppearance.BorderSize = 0;
-            this.buttonMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMin.Image = ((System.Drawing.Image)(resources.GetObject("buttonMin.Image")));
-            this.buttonMin.Location = new System.Drawing.Point(931, 0);
-            this.buttonMin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonMin.Name = "buttonMin";
-            this.buttonMin.Size = new System.Drawing.Size(24, 24);
-            this.buttonMin.TabIndex = 2;
-            this.buttonMin.UseVisualStyleBackColor = true;
-            this.buttonMin.Click += new System.EventHandler(this.buttonMin_Click);
-            // 
             // timer
             // 
             this.timer.Interval = 10;
@@ -160,7 +118,7 @@ namespace C_Sharp_Final_Chat
             // 
             // panelSide
             // 
-            this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(197)))), ((int)(((byte)(255)))));
             this.panelSide.Controls.Add(this.panelHelp);
             this.panelSide.Controls.Add(this.buttonHelp);
             this.panelSide.Controls.Add(this.panelChat);
@@ -285,34 +243,6 @@ namespace C_Sharp_Final_Chat
             this.buttonChatroom.UseVisualStyleBackColor = false;
             this.buttonChatroom.Click += new System.EventHandler(this.buttonChatroom_Click_1);
             // 
-            // buttonChat
-            // 
-            this.buttonChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.buttonChat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonChat.FlatAppearance.BorderSize = 0;
-            this.buttonChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChat.ForeColor = System.Drawing.Color.White;
-            this.buttonChat.Location = new System.Drawing.Point(0, 93);
-            this.buttonChat.Name = "buttonChat";
-            this.buttonChat.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.buttonChat.Size = new System.Drawing.Size(244, 41);
-            this.buttonChat.TabIndex = 1;
-            this.buttonChat.Text = "Chat";
-            this.buttonChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChat.UseVisualStyleBackColor = false;
-            this.buttonChat.Click += new System.EventHandler(this.buttonChat_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Image = global::C_Sharp_Final_Chat.Properties.Resources.logZ;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(244, 93);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // panelMain
             // 
             this.panelMain.Controls.Add(this.panelChildForm);
@@ -343,6 +273,78 @@ namespace C_Sharp_Final_Chat
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
+            // buttonClose
+            // 
+            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
+            this.buttonClose.Location = new System.Drawing.Point(997, 0);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(21, 24);
+            this.buttonClose.TabIndex = 4;
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // buttonMax
+            // 
+            this.buttonMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMax.FlatAppearance.BorderSize = 0;
+            this.buttonMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMax.Image = ((System.Drawing.Image)(resources.GetObject("buttonMax.Image")));
+            this.buttonMax.Location = new System.Drawing.Point(963, 0);
+            this.buttonMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonMax.Name = "buttonMax";
+            this.buttonMax.Size = new System.Drawing.Size(26, 24);
+            this.buttonMax.TabIndex = 3;
+            this.buttonMax.UseVisualStyleBackColor = true;
+            this.buttonMax.Click += new System.EventHandler(this.buttonMax_Click);
+            // 
+            // buttonMin
+            // 
+            this.buttonMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMin.FlatAppearance.BorderSize = 0;
+            this.buttonMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMin.Image = ((System.Drawing.Image)(resources.GetObject("buttonMin.Image")));
+            this.buttonMin.Location = new System.Drawing.Point(931, 0);
+            this.buttonMin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonMin.Name = "buttonMin";
+            this.buttonMin.Size = new System.Drawing.Size(24, 24);
+            this.buttonMin.TabIndex = 2;
+            this.buttonMin.UseVisualStyleBackColor = true;
+            this.buttonMin.Click += new System.EventHandler(this.buttonMin_Click);
+            // 
+            // buttonChat
+            // 
+            this.buttonChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.buttonChat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonChat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonChat.FlatAppearance.BorderSize = 0;
+            this.buttonChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChat.ForeColor = System.Drawing.Color.White;
+            this.buttonChat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChat.Location = new System.Drawing.Point(0, 93);
+            this.buttonChat.Name = "buttonChat";
+            this.buttonChat.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonChat.Size = new System.Drawing.Size(244, 41);
+            this.buttonChat.TabIndex = 1;
+            this.buttonChat.Text = "Chat";
+            this.buttonChat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonChat.UseVisualStyleBackColor = false;
+            this.buttonChat.Click += new System.EventHandler(this.buttonChat_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = global::C_Sharp_Final_Chat.Properties.Resources.logZ;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(244, 93);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
@@ -363,10 +365,10 @@ namespace C_Sharp_Final_Chat
             this.panelSide.ResumeLayout(false);
             this.panelHelp.ResumeLayout(false);
             this.panelChat.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -60,9 +60,12 @@ namespace C_Sharp_Final_Chat
         {
             if (WindowState == FormWindowState.Minimized)
             {
-                Show();
+                this.Show();
+                this.ShowInTaskbar = true;
                 WindowState = FormWindowState.Normal;
             }
+            this.TopMost = true;
+            this.TopMost = false;
         }
 
         private void 退出ToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -74,9 +77,12 @@ namespace C_Sharp_Final_Chat
         {
             if (WindowState == FormWindowState.Minimized)
             {
-                Show();
+                this.Show();
+                this.ShowInTaskbar = true;
                 WindowState = FormWindowState.Normal;
             }
+            this.TopMost = true;
+            this.TopMost = false;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

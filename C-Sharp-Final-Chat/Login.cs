@@ -29,7 +29,7 @@ namespace C_Sharp_Final_Chat
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             UserName = textBox.Text;
-            if (UserName.Length > 32)
+            if (string.IsNullOrEmpty(UserName))
             {
                 var loginwarn = new LoginWarn();
                 loginwarn.ShowDialog();

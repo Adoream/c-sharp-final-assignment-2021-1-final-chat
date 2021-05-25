@@ -39,9 +39,9 @@ namespace C_Sharp_Final_Chat
             this.button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(187)))), ((int)(((byte)(255)))));
             this.button.FlatAppearance.BorderSize = 0;
             this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Location = new System.Drawing.Point(64, 93);
+            this.button.Location = new System.Drawing.Point(65, 93);
             this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(75, 32);
+            this.button.Size = new System.Drawing.Size(70, 30);
             this.button.TabIndex = 0;
             this.button.Text = "确定";
             this.button.UseVisualStyleBackColor = false;
@@ -53,11 +53,11 @@ namespace C_Sharp_Final_Chat
             this.label.BackColor = System.Drawing.Color.Transparent;
             this.label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(51, 34);
+            this.label.Location = new System.Drawing.Point(50, 34);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(117, 40);
+            this.label.Size = new System.Drawing.Size(99, 20);
             this.label.TabIndex = 1;
-            this.label.Text = "请输入32位以下\r\n  的Username";
+            this.label.Text = "输入不能为空";
             // 
             // LoginWarn
             // 

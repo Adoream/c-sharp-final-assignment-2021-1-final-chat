@@ -30,7 +30,9 @@ namespace C_Sharp_Final_Chat
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label = new System.Windows.Forms.Label();
+            this.pictureBoxClosed = new System.Windows.Forms.PictureBox();
+            this.pictureBoxClose = new System.Windows.Forms.PictureBox();
+            this.labelCurrentUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
@@ -38,6 +40,8 @@ namespace C_Sharp_Final_Chat
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClosed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +49,9 @@ namespace C_Sharp_Final_Chat
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label);
+            this.panel1.Controls.Add(this.pictureBoxClosed);
+            this.panel1.Controls.Add(this.pictureBoxClose);
+            this.panel1.Controls.Add(this.labelCurrentUsername);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button);
             this.panel1.Controls.Add(this.textBox);
@@ -56,20 +62,48 @@ namespace C_Sharp_Final_Chat
             this.panel1.Size = new System.Drawing.Size(350, 500);
             this.panel1.TabIndex = 1;
             // 
-            // label
+            // pictureBoxClosed
             // 
-            this.label.AutoSize = true;
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.label.Location = new System.Drawing.Point(136, 237);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(57, 27);
-            this.label.TabIndex = 6;
-            this.label.Text = "label";
+            this.pictureBoxClosed.Image = global::C_Sharp_Final_Chat.Properties.Resources.返回副本;
+            this.pictureBoxClosed.Location = new System.Drawing.Point(289, 446);
+            this.pictureBoxClosed.Name = "pictureBoxClosed";
+            this.pictureBoxClosed.Size = new System.Drawing.Size(32, 35);
+            this.pictureBoxClosed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxClosed.TabIndex = 8;
+            this.pictureBoxClosed.TabStop = false;
+            this.pictureBoxClosed.Visible = false;
+            this.pictureBoxClosed.Click += new System.EventHandler(this.pictureBoxClosed_Click);
+            this.pictureBoxClosed.MouseLeave += new System.EventHandler(this.pictureBoxClosed_MouseLeave);
+            // 
+            // pictureBoxClose
+            // 
+            this.pictureBoxClose.Image = global::C_Sharp_Final_Chat.Properties.Resources.返回;
+            this.pictureBoxClose.Location = new System.Drawing.Point(289, 446);
+            this.pictureBoxClose.Name = "pictureBoxClose";
+            this.pictureBoxClose.Size = new System.Drawing.Size(32, 35);
+            this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxClose.TabIndex = 7;
+            this.pictureBoxClose.TabStop = false;
+            this.pictureBoxClose.MouseHover += new System.EventHandler(this.pictureBoxClose_MouseHover);
+            // 
+            // labelCurrentUsername
+            // 
+            this.labelCurrentUsername.AutoSize = true;
+            this.labelCurrentUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(187)))), ((int)(((byte)(255)))));
+            this.labelCurrentUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelCurrentUsername.ForeColor = System.Drawing.Color.White;
+            this.labelCurrentUsername.Location = new System.Drawing.Point(68, 237);
+            this.labelCurrentUsername.Name = "labelCurrentUsername";
+            this.labelCurrentUsername.Size = new System.Drawing.Size(57, 27);
+            this.labelCurrentUsername.TabIndex = 6;
+            this.labelCurrentUsername.Text = "label";
+            this.labelCurrentUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 195);
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Location = new System.Drawing.Point(60, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 27);
             this.label2.TabIndex = 4;
@@ -82,9 +116,9 @@ namespace C_Sharp_Final_Chat
             this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button.Font = new System.Drawing.Font("微软雅黑", 10F);
             this.button.ForeColor = System.Drawing.Color.White;
-            this.button.Location = new System.Drawing.Point(101, 390);
+            this.button.Location = new System.Drawing.Point(110, 385);
             this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(131, 34);
+            this.button.Size = new System.Drawing.Size(130, 34);
             this.button.TabIndex = 3;
             this.button.Text = "Change";
             this.button.UseVisualStyleBackColor = false;
@@ -94,17 +128,18 @@ namespace C_Sharp_Final_Chat
             // 
             this.textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(187)))), ((int)(((byte)(255)))));
             this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.textBox.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.textBox.ForeColor = System.Drawing.Color.White;
-            this.textBox.Location = new System.Drawing.Point(63, 328);
+            this.textBox.Location = new System.Drawing.Point(65, 338);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(220, 22);
+            this.textBox.Size = new System.Drawing.Size(220, 27);
             this.textBox.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 281);
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(60, 296);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 27);
             this.label1.TabIndex = 1;
@@ -113,9 +148,9 @@ namespace C_Sharp_Final_Chat
             // pictureBox1
             // 
             this.pictureBox1.Image = global::C_Sharp_Final_Chat.Properties.Resources.realLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 56);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(266, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(270, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -145,6 +180,8 @@ namespace C_Sharp_Final_Chat
             this.Load += new System.EventHandler(this.ChangeUserName_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClosed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -157,8 +194,10 @@ namespace C_Sharp_Final_Chat
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label labelCurrentUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button;
+        private System.Windows.Forms.PictureBox pictureBoxClose;
+        private System.Windows.Forms.PictureBox pictureBoxClosed;
     }
 }

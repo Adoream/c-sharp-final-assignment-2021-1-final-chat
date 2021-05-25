@@ -167,6 +167,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\C#logo.jpg" />
+    <None Include="Resources\返回副本.png" />
+    <None Include="Resources\返回.png" />
     <None Include="Resources\关机ed1.png" />
     <None Include="Resources\loginLogo %281%29.png" />
     <None Include="Resources\C#logo1.jpg" />
@@ -174,6 +176,8 @@
     <None Include="Resources\light1.png" />
     <None Include="Resources\loginLogo1.png" />
     <None Include="Resources\logZ1.png" />
+    <None Include="Resources\Chat.png" />
+    <None Include="Resources\help.png" />
     <Content Include="Resources\realLogo.png" />
     <None Include="Resources\realLogo1.png" />
     <Content Include="Resources\关机.png" />
